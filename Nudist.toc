@@ -1,0 +1,16 @@
+## Interface: 20100
+
+## Title: Nudist
+## Notes: Sometimes you just want to run around nekkid.
+## Author: Tekkub Stoutwrithe
+## Version: Alpha
+## X-Website: http://code.google.com/p/tekkub-wow/
+## X-Email: tekkub-wow@googlegroups.com
+## X-Category: Miscellaneous
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Hooks: CharacterFrame_OnShow
+## X-LoadOn-CharacterFrame_OnShow: LoadAddOn('Nudist')
+## X-LoadOn-Slash: /nudist
+
+Nudist.lua
