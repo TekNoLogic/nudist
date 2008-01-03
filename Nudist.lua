@@ -28,8 +28,8 @@ SlashCmdList["NUDIST"] = function()
 	if next(items) then
 		for i=1,#items do EquipItemByName(table.remove(items)) end
 	else
+		GetEmpties()
 		for _,i in ipairs(slots) do
-			GetEmpties()
 			local bag = GetNextEmpty()
 			if not bag then return end
 
