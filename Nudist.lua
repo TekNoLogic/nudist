@@ -22,12 +22,39 @@ local function GetNextEmpty()
 end
 
 
-SlashCmdList["NUDIST"] = function()
+---------------------------------
+--      Char frame button      --
+---------------------------------
+
+local butt = CreateFrame("Button", nil, CharacterFrame)
+butt:SetFrameStrata("DIALOG")
+butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -40)
+butt:SetWidth(64) butt:SetHeight(64)
+
+-- Fonts --
+butt:SetDisabledFontObject(GameFontDisable)
+butt:SetHighlightFontObject(smallfont and GameFontHighlightSmall or GameFontHighlight)
+butt:SetTextFontObject(smallfont and GameFontNormalSmall or GameFontNormal)
+
+-- Textures --
+butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
+butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
+
+-- Tooltip bits
+--~ butt:SetScript("OnEnter", ShowTooltip)
+--~ butt:SetScript("OnLeave", HideTooltip)
+
+
+local function handler()
 	if CursorHasItem() then ClearCursor() end
 
 	if next(items) then
 		for i=1,#items do EquipItemByName(table.remove(items)) end
+		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
+		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 	else
+		butt:SetNormalTexture("Interface\\Addons\\Nudist\\nude")
+		butt:SetPushedTexture("Interface\\Addons\\Nudist\\clothed")
 		GetEmpties()
 		for _,i in ipairs(slots) do
 			local bag = GetNextEmpty()
@@ -44,5 +71,5 @@ SlashCmdList["NUDIST"] = function()
 end
 
 SLASH_NUDIST1 = "/nudist"
-
-
+SlashCmdList["NUDIST"] = handler
+butt:SetScript("OnClick", handler)
