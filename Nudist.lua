@@ -31,11 +31,6 @@ butt:SetFrameStrata("DIALOG")
 butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -40)
 butt:SetWidth(64) butt:SetHeight(64)
 
--- Fonts --
-butt:SetDisabledFontObject(GameFontDisable)
-butt:SetHighlightFontObject(smallfont and GameFontHighlightSmall or GameFontHighlight)
-butt:SetTextFontObject(smallfont and GameFontNormalSmall or GameFontNormal)
-
 -- Textures --
 butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
 butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
