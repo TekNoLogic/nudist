@@ -9,8 +9,7 @@
 ## X-Category: Miscellaneous
 
 ## LoadManagers: AddonLoader
-## X-LoadOn-Hooks: CharacterFrame_OnShow
-## X-LoadOn-CharacterFrame_OnShow: LoadAddOn('Nudist')
+## X-LoadOn-Execute: CreateFrame("Frame", nil, CharacterFrame):SetScript("OnShow", function(self) LoadAddOn('Nudist'); self:SetScript("OnShow", nil) end)
 ## X-LoadOn-Slash: /nudist
 
 Nudist.lua
