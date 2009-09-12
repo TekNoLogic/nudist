@@ -44,7 +44,7 @@ local function handler()
 	if CursorHasItem() then ClearCursor() end
 
 	if next(items) then
-		for i=1,#items do EquipItemByName(table.remove(items)) end
+		for i=1,(#items/2) do EquipItemByName(table.remove(items), table.remove(items)) end
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 	else
@@ -57,7 +57,8 @@ local function handler()
 
 			local item = GetInventoryItemLink("player", i)
 			if item then
-				table.insert(items, (GetItemInfo(item)))
+				table.insert(items, item)
+				table.insert(items, i)
 				PickupInventoryItem(i)
 				if bag == 0 then PutItemInBackpack() else PutItemInBag(bag + 19) end
 			end
