@@ -47,7 +47,7 @@ local function handler()
 		for i=1,(#items/2) do EquipItemByName(table.remove(items), table.remove(items)) end
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
-	else
+	elseif not InCombatLockdown()
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\nude")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\clothed")
 		GetEmpties()
