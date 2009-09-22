@@ -1,3 +1,7 @@
+3.2.0.4-Release
+    Don't allow re-equipping in combat
+    Use link and slot for reequipping, to ensure the items go back where they were
+
 3.1.0.3-Release
     Fix AL condition for 3.1
 
