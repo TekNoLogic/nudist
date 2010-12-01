@@ -26,7 +26,7 @@ end
 --      Char frame button      --
 ---------------------------------
 
-local butt = CreateFrame("Button", nil, CharacterFrame)
+local butt = CreateFrame("Button", nil, PaperDollFrame)
 butt:SetFrameStrata("DIALOG")
 butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -40)
 butt:SetWidth(64) butt:SetHeight(64)
