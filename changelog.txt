@@ -1,3 +1,6 @@
+4.0.0.5-Release
+    Fix gnome's parent so it only shows on the base char panel
+
 3.2.0.4-Release
     Don't allow re-equipping in combat
     Use link and slot for reequipping, to ensure the items go back where they were
