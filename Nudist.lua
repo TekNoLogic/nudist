@@ -28,7 +28,7 @@ end
 
 local butt = CreateFrame("Button", nil, PaperDollFrame)
 butt:SetFrameStrata("DIALOG")
-butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -40)
+butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -30)
 butt:SetWidth(64) butt:SetHeight(64)
 
 -- Textures --
