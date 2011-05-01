@@ -1,3 +1,7 @@
+4.1.0.6-Release
+    Tweak position to not overlap the new tabs
+    Move the original images off so as not to confuse wow
+
 4.0.0.5-Release
     Fix gnome's parent so it only shows on the base char panel
 
